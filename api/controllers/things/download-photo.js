@@ -39,7 +39,7 @@ module.exports = {
     }
 
     var friends = User.findOne({ id: this.req.me.id }).populate('friends');
-    if(this.re.me.id !== thing.owner && !_.any(friends, { id: thing.owner })){
+    if(this.req.me.id !== thing.owner && !_.any(friends, { id: thing.owner })){
       throw 'forbidden';
     }
 

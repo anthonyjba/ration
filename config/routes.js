@@ -16,6 +16,7 @@ module.exports.routes = {
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
   'GET /':                   { action: 'view-homepage-or-redirect' },
   'GET /welcome':            { action: 'dashboard/view-welcome' },
+  'GET /things/:virtualPageSlug?': { action: 'things/view-available-things' },
 
   'GET /faq':                { view:   'pages/faq' },
   'GET /legal/terms':        { view:   'pages/legal/terms' },
@@ -34,7 +35,7 @@ module.exports.routes = {
   'GET /account/password':   { action: 'account/view-edit-password' },
   'GET /account/profile':    { action: 'account/view-edit-profile' },
 
-  'GET /things/available-things': { action: 'things/view-available-things' },
+  //'GET /things/available-things': { action: 'things/view-available-things' },
 
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
@@ -53,7 +54,7 @@ module.exports.routes = {
   'POST  /api/v1/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
   
   'POST  /api/v1/things':          { action: 'things/upload-thing' },
-  'GET  /api/v1/things:id':          { action: 'things/download-photo' },
+  'GET  /api/v1/things/:id':          { action: 'things/download-photo' },
   'DELETE  /api/v1/things/destroy-one-thing':          { action: 'things/destroy-one-thing' },
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗

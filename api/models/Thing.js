@@ -31,6 +31,12 @@ module.exports = {
       required: true
     },
 
+    expectedReturnAt: {
+      type: 'number',
+      description: 'A Js timestamp representing them moment of this item\'s expected return',
+      example: 1506568911
+    },
+
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
@@ -39,6 +45,11 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+    borrowed: {
+      model: 'User',
+      description: 'The id of the user who is currently borrowing this item, or null if it\'s not currently being borrowed.'
+    },
+
     owner: {
       model: 'User',
       description: 'The user who uploaded this item.',
